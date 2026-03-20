@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200"> 
+    <title>Ustani Sadia | Divine Quran Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Quicksand:wght@300;500;700&display=swap');
+
+        :root {
+            --royal-green: #042f2e;
+            --gold-glow: #eab308;
+            --cream: #fffdf5;
+        }
+
+        body { 
+            font-family: 'Quicksand', sans-serif; 
+            background-color: var(--cream);
+            color: var(--royal-green);
+            /* Desktop view ko maintain karne ke liye overflow control */
+            overflow-x: auto; 
+            min-width: 1200px;
+        }
+
+        .font-luxury { font-family: 'Cinzel Decorative', cursive; }
+
+        .islamic-pattern {
+            background-color: #042f2e;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%2394a3b8' fill-opacity='0.05'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H1l5-20h5zm6.5 24.5l-15 15V11l15 13.5zM45 0l5 20H35l5-20h5zm6.5 24.5l-15 15V11l15 13.5zM79 0l5 20H69l5-20h5zM11 40l5 20H1l5-20h5zm6.5 24.5l-15 15V51l15 13.5zM45 40l5 20H35l5-20h5zm6.5 24.5l-15 15V51l15 13.5zM79 40l5 20H69l5-20h5z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .gold-shimmer-btn {
+            background: linear-gradient(135deg, #b8860b 0%, #f1d38a 50%, #b8860b 100%);
+            background-size: 200% auto;
+            transition: 0.5s;
+            box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+        }
+        .gold-shimmer-btn:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #b8860b;
+            width: 100%; /* Fixed for desktop view */
+        }
+
+        .floating-card {
+            border-radius: 30px;
+            background: white;
+            box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+            transition: 0.3s;
+        }
+        .floating-card:hover { transform: scale(1.03); border: 1px solid #b8860b; }
+
+        .reveal-text {
+            background: linear-gradient(to right, #042f2e 20%, #b8860b 40%, #b8860b 60%, #042f2e 80%);
+            background-size: 200% auto;
+            color: #000;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+        }
+        @keyframes shine { to { background-position: 200% center; } }
+
+        .swiper { width: 100%; padding-top: 50px; padding-bottom: 50px; }
+        .swiper-slide {
+            background-position: center; background-size: cover;
+            width: 320px; height: 450px; border-radius: 30px;
+            border: 8px solid white; box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            position: relative; overflow: hidden;
+        }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+        .slide-overlay {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(4, 47, 46, 0.9));
+            padding: 20px; color: white; text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-header fixed w-full z-50 py-4 px-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="font-luxury text-2xl font-black text-emerald-900 tracking-tighter">
+                USTANI <span class="text-yellow-600">SADIA</span>
+            </div>
+            <div class="flex space-x-8 font-bold text-sm uppercase tracking-widest items-center">
+                <a href="#home" class="hover:text-yellow-600 transition">Home</a>
+                <a href="#courses" class="hover:text-yellow-600 transition">Classes</a>
+                <a href="#contact" class="gold-shimmer-btn text-white px-8 py-2 rounded-full shadow-lg">Free Trial</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="islamic-pattern min-h-screen flex items-center justify-center relative pt-20">
+        <div class="container mx-auto px-8 grid grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="1500">
+                <span class="text-yellow-500 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Al-Quran Is the Light</span>
+                <h1 class="font-luxury text-5xl lg:text-7xl text-white leading-tight mb-8">
+                    Beautiful <span class="reveal-text">Quran Recitation</span> Classes Online
+                </h1>
+                <p class="text-slate-300 text-lg mb-10 leading-relaxed font-light">
+                    Join the most attractive and professional online academy. Specializing in female and kids' education with Tajweed, Makhraj, and Spiritual Tarbiyah by **Ustani Sadia**.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="gold-shimmer-btn px-10 py-4 rounded-full font-bold text-emerald-950 shadow-2xl hover:shadow-yellow-500/50 transition">Register Now</a>
+                    <a href="#courses" class="border border-white/30 text-white px-10 py-4 rounded-full hover:bg-white/10 transition">Our Courses</a>
+                </div>
+            </div>
+            
+            <div class="relative" data-aos="zoom-in" data-aos-duration="2000">
+                <div class="absolute inset-0 bg-yellow-500/20 blur-[100px] rounded-full"></div>
+                <img src="https://images.pexels.com/photos/11842681/pexels-photo-11842681.jpeg" class="rounded-[50px] border-[15px] border-white/5 shadow-2xl relative z-10" alt="Quran">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white overflow-hidden">
+        <div class="container mx-auto px-8">
+            <div class="text-center mb-10" data-aos="fade-up">
+                <h2 class="font-luxury text-3xl text-emerald-900 italic">Divine Gallery</h2>
+                <p class="text-gray-400 mt-2">Glimpses of our spiritual journey and sacred learning</p>
+            </div>
+
+            <div class="swiper mySwiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0au_gZV1pw7r5XqnOkqRzW6IR7tK3B_S7Q&s" alt="Quran">
+                        <div class="slide-overlay"><h4 class="font-bold">Tajweed Al-Quran</h4></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjD5QihbeJZQVPFYg_yXLvWS3itkT8yCG9jQ&s" alt="Madina">
+                        <div class="slide-overlay"><h4 class="font-bold">Spiritual Growth</h4></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzNTjLyEUYdy8hWEPtGSg2iw-wK_I1xCS8eA&s" alt="Islamic Art">
+                        <div class="slide-overlay"><h4 class="font-bold">Kids Education</h4></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS93-JK8NK4GalEZqU9TQ630UdZAdFwipQ8Gg&s" alt="Mosque">
+                        <div class="slide-overlay"><h4 class="font-bold">Global Community</h4></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpgUAwx6S30Kri2fuxPlMaxw4-bg2foYG8pQ&s" alt="Prayer">
+                        <div class="slide-overlay"><h4 class="font-bold">Islamic Values</h4></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="py-10 text-center bg-white text-3xl text-yellow-600">
+        <i class="fas fa-star-and-crescent"></i>
+    </div>
+
+    <section id="courses" class="py-24 bg-white">
+        <div class="container mx-auto px-8">
+            <div class="text-center mb-20">
+                <h2 class="font-luxury text-4xl mb-4">Our Sacred Programs</h2>
+                <div class="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-10">
+                <div class="floating-card p-10 text-center group" data-aos="fade-up">
+                    <div class="text-5xl text-emerald-900 mb-6 group-hover:text-yellow-600 transition">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3 class="font-luxury text-2xl mb-4">Noorani Qaida</h3>
+                    <p class="text-gray-500 mb-8">Foundation building for toddlers and beginners with soft teaching methods.</p>
+                    <button class="font-bold text-yellow-600 border-b-2 border-yellow-600">Enquire Now</button>
+                </div>
+                <div class="floating-card p-10 text-center group border-2 border-yellow-500/20" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl text-emerald-900 mb-6 group-hover:text-yellow-600 transition">
+                        <i class="fas fa-book-quran"></i>
+                    </div>
+                    <h3 class="font-luxury text-2xl mb-4">Tajweed Mastery</h3>
+                    <p class="text-gray-500 mb-8">Perfect your pronunciation (Makharij) and recite the Quran with soul-stirring beauty.</p>
+                    <button class="font-bold text-yellow-600 border-b-2 border-yellow-600">Enquire Now</button>
+                </div>
+                <div class="floating-card p-10 text-center group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-5xl text-emerald-900 mb-6 group-hover:text-yellow-600 transition">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="font-luxury text-2xl mb-4">Hifz Program</h3>
+                    <p class="text-gray-500 mb-8">Memorize the Holy Quran at your own pace with 1-on-1 private tracking.</p>
+                    <button class="font-bold text-yellow-600 border-b-2 border-yellow-600">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 islamic-pattern text-white">
+        <div class="container mx-auto px-8 grid grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_jJTNOVTTeHIhzj_GN9oEYpOpYZ5qY78gbw&s" class="rounded-[100px] border-8 border-yellow-600/30" alt="Academy">
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="font-luxury text-4xl mb-6 text-yellow-500 italic">Message from Ustani Sadia</h2>
+                <p class="text-xl leading-loose font-light italic mb-8">
+                    "Hamara maqsad sirf parhana nahi, balki bachon aur behno ke dil mein Quran ki mohabbat paida karna hai. Hum technology aur deen ko mila kar ek haseen tajarba faraham karte hain."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-[2px] bg-yellow-500"></div>
+                    <span class="font-luxury tracking-widest">Founder & Lead Teacher</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="container mx-auto px-8">
+            <div class="max-w-4xl mx-auto bg-white rounded-[50px] shadow-2xl p-12 lg:p-20 relative z-10">
+                <div class="text-center mb-12">
+                    <h2 class="font-luxury text-4xl mb-4">Start Your 3-Day Free Trial</h2>
+                    <p class="text-gray-400">Join 500+ students learning globally with Ustani Sadia.</p>
+                </div>
+                <form id="bookingForm" class="grid grid-cols-2 gap-6">
+                    <input type="text" id="studentName" placeholder="Student Name" required class="bg-slate-100 p-5 rounded-2xl outline-none focus:ring-2 ring-yellow-500 transition">
+                    <input type="text" id="whatsappNum" placeholder="WhatsApp (e.g. +44...)" required class="bg-slate-100 p-5 rounded-2xl outline-none focus:ring-2 ring-yellow-500 transition">
+                    <select id="courseName" class="bg-slate-100 p-5 rounded-2xl col-span-2 outline-none">
+                        <option>Select Your Course</option>
+                        <option>Noorani Qaida</option>
+                        <option>Quran Recitation</option>
+                        <option>Memorization (Hifz)</option>
+                    </select>
+                    <button type="submit" class="col-span-2 gold-shimmer-btn p-5 rounded-2xl text-emerald-950 font-bold text-xl uppercase tracking-widest shadow-xl">Book My Free Class Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-emerald-950 text-white text-center border-t border-yellow-600/30">
+        <div class="font-luxury text-3xl mb-4">Ustani Sadia Academy</div>
+        <p class="text-slate-400 mb-8">Teaching with Love, Patience, and Professionalism.</p>
+        <div class="flex justify-center gap-6 text-2xl text-yellow-500 mb-10">
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+        </div>
+        <div class="text-[10px] tracking-[5px] uppercase opacity-40">
+            &copy; 2026 Al-Noor Excellence Academy | UK - USA - Global
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init();
+
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+
+        // WhatsApp Booking Script
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const teacherNumber = "923052560109"; 
+            
+            const name = document.getElementById('studentName').value;
+            const whatsapp = document.getElementById('whatsappNum').value;
+            const course = document.getElementById('courseName').value;
+            
+            const message = `Assalam-o-Alaikum, I want to book a free trial class.%0A%0A*Name:* ${name}%0A*WhatsApp:* ${whatsapp}%0A*Course:* ${course}`;
+            
+            window.open(`https://wa.me/${teacherNumber}?text=${message}`, '_blank');
+        });
+    </script>
+</body>
+</html>
